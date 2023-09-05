@@ -65,7 +65,7 @@ class LogsHttpLogger implements LogsHttpLoggerInterface {
   /**
    * {@inheritdoc}
    */
-  public function log($level, $message, array $context = []) {
+  public function log($level, string|\Stringable $message, array $context = []): void {
     if (!$this->isEnabled()) {
       // Service is disabled.
       return;
